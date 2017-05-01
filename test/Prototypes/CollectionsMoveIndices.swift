@@ -47,19 +47,19 @@
 //     protocol SequenceType {}
 //     protocol CollectionType : SequenceType {}
 //
-//       protocol MutableCollectionType : CollectionType {}
-//       protocol RangeReplaceableCollectionType : CollectionType {}
+//     protocol MutableCollectionType : CollectionType {}
+//     protocol RangeReplaceableCollectionType : CollectionType {}
 //
-//       protocol BidirectionalCollectionType : CollectionType {}
-//         protocol RandomAccessCollectionType : BidirectionalCollectionType {}
+//     protocol BidirectionalCollectionType : CollectionType {}
+//     protocol RandomAccessCollectionType : BidirectionalCollectionType {}
 //
 // Proposed Solution
 // =================
 //
 // Change indices so that they can't be moved forward or backward by
-// themselves (`i.successor()` is not allowed).  Then indices can
+// themselves (`i.successor()` is not allowed). Then indices can
 // store the minimal amount of information only about the element
-// position in the collection.  Usually index can be represented as
+// position in the collection. Usually index can be represented as
 // one or a couple of integers that encode the "path" in the
 // data structure from the root to the element.  In this
 // representation, only a collection can move indices (e.g.,
@@ -1378,4 +1378,3 @@ NewCollection.test("RangeLiterals") {
 }
 
 runAllTests()
-
